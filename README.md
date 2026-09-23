@@ -18,36 +18,28 @@ git clone https://github.com/<YOUR-GITHUB-USERNAME>/ai110-tinker-studysync-start
 cd ai110-tinker-studysync-starter
 ```
 
-Create and activate a virtual environment:
+Install Python and dependencies with `uv`:
 
 ```bash
-python3 -m venv .venv
+uv sync
 ```
 
-macOS, Linux, Git Bash or WSL:
+Run the app:
 
 ```bash
-source .venv/bin/activate
-```
-
-Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Install dependencies and run:
-
-```bash
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python -m streamlit run app.py
+uv run streamlit run app.py
 ```
 
 Run the tests:
 
 ```bash
-pytest
+uv run pytest
+```
+
+If you want to activate the environment manually:
+
+```bash
+source .venv/bin/activate
 ```
 
 ## Files
